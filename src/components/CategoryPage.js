@@ -12,11 +12,11 @@ const CategoryPage = ({allItem}) => {
   return (
     <div>
         {
-            items.map((item)=>{
-             return <div key={item}>  <Link key={item} to={`${basePath}/${item}`}>
+            items.map((item)=> {
+             return <ul><li> <div key={item}>  <Link key={item} to={`${basePath}/${item}`}>
                     {item}
-                </Link><br></br>
-                </div>
+                </Link>
+                </div></li></ul>
             })
             
 

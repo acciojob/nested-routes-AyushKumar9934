@@ -7,9 +7,9 @@ const Layout = ({category}) => {
         <nav> <Link to="/">Home</Link>{
            
         category.map((category)=>{
-          return <div> <Link key={category.id} to={`/category/${category.id}`} >
+          return<ul> <li><div> <Link key={category.id} to={`/category/${category.id}`} >
                 {category.name}
-            </Link><br></br></div>
+            </Link><br></br></div></li></ul>
         })
         
         

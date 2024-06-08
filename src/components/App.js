@@ -6,7 +6,7 @@ import Layout from "./Layout";
 import CategoryPage from "./CategoryPage";
 
 const App = () => {
-  const category=[{id:"1",name:"PrJi"},{id:"2",name:"MataJi"}]
+  const category=[{id:"1",name:"PrJi"},{id:"2",name:"Women"}]
   const allItem=[{id:"1",categoryItem:["Dhoti","Kurta","Tilak","BeadBag"]},{id:"2",categoryItem:["Sari","BeadBag","Tilak","Prasadam"]}]
   return (
     <div>
