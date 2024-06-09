@@ -23,15 +23,9 @@ const CategoryPage = ({allItem}) => {
             {
                 items.map((item) => {
                     return (
-                        <ul>
-                            <li>
-                                <div key={item}>
-                                    <a href={`${basePath}/${item}`} onClick={(e) => handleClick(e, `${basePath}/${item}`)}>
-                                        {item}
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
+                        <a key={item} href={`${basePath}/${item}`} onClick={(e) => handleClick(e, `${basePath}/${item}`)}>
+                            {item}
+                        </a>
                     )
                 })
             }

@@ -18,15 +18,9 @@ const Layout = ({category}) => {
             {
                 category.map((category) => {
                     return (
-                        <ul>
-                            <li>
-                                <div>
-                                    <a key={category.id} href={`/category/${category.id}`} onClick={(e) => handleClick(e, `/category/${category.id}`)}>
-                                        {category.name}
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
+                        <a key={category.id} href={`/category/${category.id}`} onClick={(e) => handleClick(e, `/category/${category.id}`)}>
+                            {category.name}
+                        </a>
                     )
                 })
             }
@@ -34,5 +28,4 @@ const Layout = ({category}) => {
     </div>
   )
 }
-
 export default Layout
