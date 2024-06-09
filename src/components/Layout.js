@@ -1,22 +1,37 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import { useNavigate } from 'react-router-dom';
+
 const Layout = ({category}) => {
+  const navigate = useNavigate();
+
+  const handleClick = (e, path) => {
+    e.preventDefault();
+    navigate(path);
+  };
+
   return (
     <div>
-        <nav> <Link to="/">Home</Link>{
-           
-        category.map((category)=>{
-          return<ul> <li><div> <Link key={category.id} to={`/category/${category.id}`} >
-                {category.name}
-            </Link><br></br></div></li></ul>
-        })
-        
-        
-        
-        
-        }<br></br></nav>
-        </div>
+        <nav>
+            <a href="/" onClick={(e) => handleClick(e, '/')}>Home</a>
+            {
+                category.map((category) => {
+                    return (
+                        <ul>
+                            <li>
+                                <div>
+                                    <a key={category.id} href={`/category/${category.id}`} onClick={(e) => handleClick(e, `/category/${category.id}`)}>
+                                        {category.name}
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    )
+                })
+            }
+        </nav>
+    </div>
   )
 }
 
